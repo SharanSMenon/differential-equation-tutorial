@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby'
 import Layout from '../components/layout'
+import { getDarkMode } from '../utils';
 
 const AboutPage = () => {
-    let darkMode = localStorage.getItem('darkMode') == "true"
+    let darkMode = getDarkMode();
     return (
         <Layout darkMode={darkMode}>
             <h1>About</h1>

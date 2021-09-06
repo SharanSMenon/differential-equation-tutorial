@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import "./default.scss"
+import { getDarkMode } from '../utils';
 
-let darkMode = localStorage.getItem('darkMode') == "true"
+let darkMode = getDarkMode();
 
 const toggleDark = (drkmode) => {
   return !drkmode
@@ -19,7 +19,9 @@ const IndexPage = () => {
       <button onClick={() => {
         darkMode = toggleDark(darkMode)
         setdm(darkMode)
-        localStorage.setItem('darkMode', darkMode)
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('darkMode', darkMode)
+        }
       }}>{darkMode ? "Light" : "Dark"} Mode</button>
     </Layout>
   )

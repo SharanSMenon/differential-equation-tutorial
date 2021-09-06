@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import './book.scss';
+import { getDarkMode } from '../utils';
 const BookPage = () => {
     const data = useStaticQuery(graphql`
         query {
@@ -25,7 +26,7 @@ const BookPage = () => {
             }   
         }
     `)
-    let darkMode = localStorage.getItem('darkMode') == "true"
+    let darkMode = getDarkMode();
     const edges = data.allContentfulBookPage.edges;
     return (
         <Layout darkMode={darkMode}>
