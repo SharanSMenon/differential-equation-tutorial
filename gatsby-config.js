@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://differential-equation-tutorial.vercel.app/",
     title: "Differential Equations",
     author: "Sharan Sajiv Menon"
   },

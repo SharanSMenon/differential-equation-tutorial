@@ -8,6 +8,7 @@
     font-family: Garamond, "Times New Roman", serif;
     text-decoration:none;
 }
+
 .nav-list {
     display: flex;
     list-style-type: none;
@@ -25,4 +26,28 @@
 }
 .active-nav-item {
     color:#333333;
+}
+a {
+    color: black;
+}
+.dark * {
+    color:white;
+    .title {
+        color:white;
+    }
+    button {
+        color:black;
+    }
+    .nav-item {
+        color:white;
+        &:hover {
+            color:darken(white, 34%);
+        }
+    }
+    .active-nav-item {
+        color:lighten(white, 50%);
+    }
+    hr {
+        border-color:white;
+    }
 }

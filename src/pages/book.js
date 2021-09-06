@@ -25,9 +25,10 @@ const BookPage = () => {
             }   
         }
     `)
+    let darkMode = localStorage.getItem('darkMode') == "true"
     const edges = data.allContentfulBookPage.edges;
     return (
-        <Layout>
+        <Layout darkMode={darkMode}>
             <title>Topics | Differential Equations</title>
             <h1>Topics</h1>
             <p>There are {data.allContentfulBookPage.totalCount} topics</p>

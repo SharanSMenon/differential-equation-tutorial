@@ -26,3 +26,15 @@
         background: darken($color: rgb(244, 242, 238), $amount: 20%);;
     }
 }
+
+.dark * {
+    .post {
+        background-color: lighten(darkslategray, 5%);
+        &:hover {
+            background-color: darken(darkslategray, 5%);
+        }
+        p {
+            color:lightgray;
+        }
+    }
+}

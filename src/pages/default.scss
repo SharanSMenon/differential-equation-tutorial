@@ -1,0 +1,18 @@
+button {
+    background-color: darken($color: rgb(244, 242, 238), $amount: 10%);
+    border:none;
+    &:hover {
+        background-color: darken($color: rgb(244, 242, 238), $amount: 20%);
+        cursor: pointer;
+    }
+}
+
+.dark {
+    button {
+        color:white;
+        background-color: lighten(darkslategray, 5%);
+        &:hover {
+            background-color: darken(darkslategray, 5%);
+        }
+    }
+}

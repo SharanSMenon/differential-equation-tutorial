@@ -19,10 +19,11 @@ export const query = graphql`
     }
 `
 const BookPage = (props) => {
+    let darkMode = localStorage.getItem('darkMode') == "true"
     const dt = props.data.contentfulBookPage;
     const markdown = props.data.markdownRemark;
     return (
-        <Layout>
+        <Layout darkMode={darkMode}>
             <title>{dt.title} | Differential Equations</title>
             <h1>{dt.title}</h1>
             <p>{dt.author} - {dt.date}</p>
